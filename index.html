@@ -39,7 +39,7 @@
 
         .header {
             background: linear-gradient(135deg, #8B4513, #A0522D);
-            padding: 4vh 5vw;
+            padding: 2.5vh 5vw;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -61,6 +61,240 @@
                 rgba(255,255,255,0.03) 20px
             );
             animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .logo {
+            width: 9vh;
+            height: 9vh;
+            max-width: 70px;
+            max-height: 70px;
+            margin: 0 auto 1vh;
+            border-radius: 50%;
+            overflow: hidden;
+            background: rgba(245, 222, 179, 0.1);
+            border: 3px solid #F5DEB3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .subtitle {
+            color: #F5DEB3;
+            font-size: clamp(16px, 3vh, 20px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.8vh 5vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.3vh;
+            padding: 1.3vh 4vw;
+            background: rgba(139, 69, 19, 0.15);
+            border-radius: 10px;
+            border-left: 3px solid #8B4513;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            font-size: clamp(20px, 3.2vh, 24px);
+            margin-right: 4vw;
+            min-width: 30px;
+            text-align: center;
+            color: #DEB887;
+        }
+
+        .info-text {
+            color: #F5DEB3;
+            font-size: clamp(13px, 2.2vh, 16px);
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .info-text a {
+            color: #DEB887;
+            text-decoration: none;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #8B4513, transparent);
+            margin: 1vh 0;
+            flex-shrink: 0;
+        }
+
+        .qr-section {
+            text-align: center;
+            padding: 1.5vh 0;
+            background: rgba(245, 222, 179, 0.05);
+            margin: 1vh 0;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .qr-code {
+            background: white;
+            padding: 1.2vh;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 15vh;
+            height: 15vh;
+            max-width: 140px;
+            max-height: 140px;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-label {
+            color: #DEB887;
+            margin-top: 0.8vh;
+            font-size: clamp(11px, 1.8vh, 13px);
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5vh 4vw;
+            background: rgba(139, 69, 19, 0.2);
+            color: #D2B48C;
+            font-size: clamp(10px, 1.6vh, 12px);
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+
+        /* Ocultar scrollbar */
+        .content::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Ajustes para pantallas muy pequeñas */
+        @media (max-height: 600px) {
+            .header {
+                padding: 2.5vh 5vw;
+            }
+            .logo {
+                width: 9vh;
+                height: 9vh;
+                margin-bottom: 1vh;
+            }
+            .info-item {
+                padding: 1.3vh 4vw;
+                margin-bottom: 1.3vh;
+            }
+            .qr-section {
+                padding: 1.5vh 0;
+                margin: 1vh 0;
+            }
+            .qr-code {
+                width: 14vh;
+                height: 14vh;
+            }
+        }
+
+        @media (max-height: 500px) {
+            .qr-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo Jazmín">
+            </div>
+            <div class="subtitle">Talabartería Jazmín</div>
+        </div>
+
+        <div class="content">
+            <div class="info-item">
+                <div class="icon"><i class="fas fa-globe"></i></div>
+                <div class="info-text">
+                    <a href="https://talabarteria-jazmin.vercel.app" target="_blank">talabarteriajazmin.cl</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
+                <div class="info-text">
+                    <a href="https://www.instagram.com/talabarteriajazmin/" target="_blank">@talabarteriajazmin</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="info-text">
+                    <a href="https://wa.me/56964020658" target="_blank">WhatsApp: +56 9 6402 0658</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon"><i class="fas fa-phone"></i></div>
+                <div class="info-text">
+                    +56 9 6402 0658
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-text">
+                    Peatonal-Arauco 673 Chillán<br>
+                    Región de Ñuble, Chile
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="qr-section">
+                <div class="qr-code">
+                    <img src="QR.png" alt="Código QR">
+                </div>
+                <div class="qr-label">Escanea nuestro QR para contactarnos</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            ✨ Artesanía en cuero de Alta calidad ✨<br>
+            Riendas • Monturas • Accesorios
+        </div>
+    </div>
+</body>
+</html>            animation: slide 20s linear infinite;
         }
 
         @keyframes slide {
