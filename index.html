@@ -25,7 +25,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .card {
             background: linear-gradient(145deg, #2c1810, #1a0f0a);
             width: 100vw;
@@ -36,7 +36,7 @@
             flex-direction: column;
             border: none;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #8B4513, #A0522D);
             padding: 4vh 5vw;
@@ -69,9 +69,11 @@
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 10px;
+            width: 12vh;
+            height: 12vh;
+            max-width: 80px;
+            max-height: 80px;
+            margin: 0 auto 1.5vh;
             border-radius: 50%;
             overflow: hidden;
             background: rgba(245, 222, 179, 0.1);
@@ -89,25 +91,7 @@
             object-fit: cover;
         }
 
-        .logo-placeholder {
-            color: #F5DEB3;
-            font-size: 14px;
-            text-align: center;
-            opacity: 0.6;
-        }
-
-        h1 {
-            color: #F5DEB3;
-            font-size: 32px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
-            z-index: 1;
-        }
-
-         .subtitle {
+        .subtitle {
             color: #F5DEB3;
             font-size: clamp(18px, 3.5vh, 24px);
             font-weight: bold;
@@ -129,17 +113,12 @@
         .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 22px;
-            padding: 15px;
+            margin-bottom: 1.8vh;
+            padding: 1.8vh 4vw;
             background: rgba(139, 69, 19, 0.15);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            border-left: 4px solid #8B4513;
-        }
-
-        .info-item:hover {
-            background: rgba(139, 69, 19, 0.25);
-            transform: translateX(5px);
+            border-radius: 10px;
+            border-left: 3px solid #8B4513;
+            flex-shrink: 0;
         }
 
         .icon {
@@ -150,46 +129,44 @@
             color: #f3f0eb;
         }
 
-
         .info-text {
             color: #bea576;
-            font-size: 15px;
+            font-size: clamp(13px, 2.2vh, 16px);
             line-height: 1.5;
+            flex: 1;
         }
 
         .info-text a {
             color: #dfc8ad;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
-        .info-text a:hover {
-            color: #dfc8ad;
-        }
-
-         .divider {
+        .divider {
             height: 2px;
             background: linear-gradient(to right, transparent, #8B4513, transparent);
             margin: 1.5vh 0;
             flex-shrink: 0;
         }
-        
+
         .qr-section {
             text-align: center;
-            padding: 25px;
+            padding: 2vh 0;
             background: rgba(245, 222, 179, 0.05);
-            margin: 20px 0;
-            border-radius: 12px;
+            margin: 1.5vh 0;
+            border-radius: 10px;
+            flex-shrink: 0;
         }
 
         .qr-code {
             background: white;
-            padding: 15px;
-            border-radius: 12px;
+            padding: 1.5vh;
+            border-radius: 10px;
             display: inline-block;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            width: 200px;
-            height: 200px;
+            width: 18vh;
+            height: 18vh;
+            max-width: 160px;
+            max-height: 160px;
         }
 
         .qr-code img {
@@ -198,21 +175,10 @@
             object-fit: contain;
         }
 
-        .qr-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 14px;
-            text-align: center;
-        }
-
         .qr-label {
             color: #DEB887;
-            margin-top: 12px;
-            font-size: 16px;
+            margin-top: 1.2vh;
+            font-size: clamp(12px, 2vh, 14px);
             font-style: italic;
         }
 
@@ -226,12 +192,7 @@
             line-height: 1.5;
         }
 
-        .divider {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #8B4513, transparent);
-            margin: 20px 0;
-        }
-         /* Ocultar scrollbar */
+        /* Ocultar scrollbar */
         .content::-webkit-scrollbar {
             display: none;
         }
@@ -239,6 +200,7 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
         /* Ajustes para pantallas muy pequeñas */
         @media (max-height: 600px) {
             .header {
@@ -268,17 +230,13 @@
                 display: none;
             }
         }
-        
     </style>
 </head>
 <body>
     <div class="card">
         <div class="header">
             <div class="logo">
-                <!-- INSERTA TU LOGO AQUÍ -->
-                <img src="logo.jpg" alt="Logo jazmín">
-                <!-- Si no tienes logo aún, verás este texto: -->
-                <!-- <div class="logo-placeholder">Logo<br>Aquí</div> -->
+                <img src="logo.jpg" alt="Logo Jazmín">
             </div>
             <div class="subtitle">Talabartería Jazmín</div>
         </div>
@@ -296,9 +254,8 @@
                 <div class="info-text">
                     <a href="https://www.instagram.com/talabarteriajazmin/" target="_blank">@talabarteriajazmin</a>
                 </div>
-            </div   
+            </div>
 
-            
             <div class="info-item">
                 <div class="icon"><i class="fab fa-whatsapp"></i></div>
                 <div class="info-text">
@@ -325,10 +282,7 @@
 
             <div class="qr-section">
                 <div class="qr-code">
-                    <!-- INSERTA TU QR AQUÍ -->
                     <img src="QR.png" alt="Código QR">
-                    <!-- Si no tienes QR aún, verás este texto: -->
-                    <!-- <div class="qr-placeholder">Tu código QR<br>aquí</div> -->
                 </div>
                 <div class="qr-label">Escanea nuestro QR para contactarnos</div>
             </div>
