@@ -143,28 +143,37 @@
         }
 
         .icon {
-            font-size: 24px;
-            margin-right: 15px;
+            font-size: clamp(20px, 3.2vh, 24px);
+            margin-right: 4vw;
             min-width: 30px;
             text-align: center;
+            color: #f3f0eb;
         }
 
+
         .info-text {
-            color: #F5DEB3;
+            color: #bea576;
             font-size: 15px;
             line-height: 1.5;
         }
 
         .info-text a {
-            color: #DEB887;
+            color: #dfc8ad;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .info-text a:hover {
-            color: #F5DEB3;
+            color: #dfc8ad;
         }
 
+         .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #8B4513, transparent);
+            margin: 1.5vh 0;
+            flex-shrink: 0;
+        }
+        
         .qr-section {
             text-align: center;
             padding: 25px;
@@ -209,10 +218,12 @@
 
         .footer {
             text-align: center;
-            padding: 25px;
+            padding: 2vh 4vw;
             background: rgba(139, 69, 19, 0.2);
             color: #D2B48C;
-            font-size: 13px;
+            font-size: clamp(11px, 1.8vh, 13px);
+            flex-shrink: 0;
+            line-height: 1.5;
         }
 
         .divider {
@@ -220,6 +231,44 @@
             background: linear-gradient(to right, transparent, #8B4513, transparent);
             margin: 20px 0;
         }
+         /* Ocultar scrollbar */
+        .content::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Ajustes para pantallas muy pequeñas */
+        @media (max-height: 600px) {
+            .header {
+                padding: 2.5vh 5vw;
+            }
+            .logo {
+                width: 9vh;
+                height: 9vh;
+                margin-bottom: 1vh;
+            }
+            .info-item {
+                padding: 1.3vh 4vw;
+                margin-bottom: 1.3vh;
+            }
+            .qr-section {
+                padding: 1.5vh 0;
+                margin: 1vh 0;
+            }
+            .qr-code {
+                width: 14vh;
+                height: 14vh;
+            }
+        }
+
+        @media (max-height: 500px) {
+            .qr-section {
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -236,36 +285,36 @@
 
         <div class="content">
             <div class="info-item">
-                <div class="icon">🌐</div>
+                <div class="icon"><i class="fas fa-globe"></i></div>
                 <div class="info-text">
                     <a href="https://talabarteria-jazmin.vercel.app" target="_blank">talabarteriajazmin.cl</a>
                 </div>
             </div>
 
-        <div class="info-item">
-                <div class="icon">📸</div>
+            <div class="info-item">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
                 <div class="info-text">
                     <a href="https://www.instagram.com/talabarteriajazmin/" target="_blank">@talabarteriajazmin</a>
                 </div>
-        </div>   
+            </div   
 
             
             <div class="info-item">
-                <div class="icon">📱</div>
+                <div class="icon"><i class="fab fa-whatsapp"></i></div>
                 <div class="info-text">
-                    <a href="https://wa.me/56964020658" target="_blank">WhatsApp: +56 9 64020658</a>
+                    <a href="https://wa.me/56964020658" target="_blank">WhatsApp: +56 9 6402 0658</a>
                 </div>
             </div>
 
             <div class="info-item">
-                <div class="icon">📞</div>
+                <div class="icon"><i class="fas fa-phone"></i></div>
                 <div class="info-text">
-                    +56 9 64020658
+                    +56 9 6402 0658
                 </div>
             </div>
 
             <div class="info-item">
-                <div class="icon">📍</div>
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
                 <div class="info-text">
                     Peatonal-Arauco 673 Chillán<br>
                     Región de Ñuble, Chile
