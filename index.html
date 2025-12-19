@@ -38,14 +38,17 @@
         }
 
         .header {
-    /* Eliminamos 'fixed' para que la imagen se quede dentro del header */
-    background: url('cuero1.jpeg') center center / cover no-repeat; 
+    background: url('cuero1.jpeg') no-repeat;
+    background-position: center;
+    background-size: 100% 100%; /* Se estira para encajar perfecto */
     padding: 4.0vh 5vw;
     text-align: center;
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
 }
+
+        
         .header::before {
             content: '';
             position: absolute;
