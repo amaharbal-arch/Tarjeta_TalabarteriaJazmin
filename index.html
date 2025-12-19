@@ -36,40 +36,20 @@
             flex-direction: column;
             border: none;
         }
-
-        .header {
-    background: url('cuero1.jpeg') no-repeat;
-    background-position: center;
-    background-size: 100% 100%; /* Se estira para encajar perfecto */
-    padding: 4.0vh 5vw;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
+                                     
+         .header {
+            background: url('cuero1.jpeg') no-repeat;
+            background-position: center;
+            background-size: 100% 100%; /* Se estira para encajar perfecto */
+            padding: 4.0vh 5vw;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+         }
 
         
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.08) 10px,
-                rgba(255,255,255,0.08) 20px
-            );
-            animation: slide 8s linear infinite;
-        }
-
-        @keyframes slide {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
+        
 
         .logo {
             width: 12vh;
